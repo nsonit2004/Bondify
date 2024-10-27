@@ -1,0 +1,211 @@
+/* Import the Julius Sans One font */
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+
+.premium-container {
+    font-family: 'Julius Sans One', sans-serif; /* Applied font to premium container only */
+    background-color: #f9f9f9; /* Light background for contrast */
+    margin: 0;
+    padding: 20px;
+    margin-left: 30%; /* Default for larger screens */
+}
+
+.premium-container .info {
+    font-family: Arial; /* Keep this as it is for user info */
+}
+
+/* Container for the premium component */
+.premium-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 3%;
+}
+
+/* Heading styles */
+.premium-wrapper h1 {
+    color: #5c06a0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Input styles */
+.premium-wrapper input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+/* Button styles */
+.premium-wrapper button {
+    background-color: #5c06a0; /* Default button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.premium-wrapper button:hover {
+    background-color: #4a0480; /* Darker shade on hover */
+}
+
+/* New style for the Make Premium button */
+.premium-wrapper .make-premium-button {
+    background-color: #E11583; /* Button color for make premium */
+    color: rgb(253, 253, 12); /* Black text for contrast */
+}
+
+.premium-wrapper .make-premium-button:hover {
+    background-color: #C81473; /* Change color on hover */
+}
+
+/* Table styles */
+.premium-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.premium-wrapper th,
+.premium-wrapper td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.premium-wrapper th {
+    background-color: #5c06a0; /* Header background color */
+    color: white; /* Header text color */
+}
+
+.premium-wrapper tr:hover {
+    background-color: #f1f1f1; /* Highlight row on hover */
+}
+
+/* Filter buttons styles */
+.premium-wrapper .filter-buttons {
+    margin: 20px 0;
+}
+
+.premium-wrapper .filter-buttons button {
+    background-color: #5c06a0; /* Default button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px; /* Spacing between buttons */
+    transition: background-color 0.3s ease;
+}
+
+.premium-wrapper .filter-buttons button:hover {
+    background-color: #4a0480; /* Darker shade on hover */
+}
+
+/* Active button style */
+.premium-wrapper .filter-buttons button.active {
+    background-color: #E11583; /* Active button color */
+    color: rgb(253, 253, 12); /* Black text for contrast */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .premium-container {
+        margin-left: 20%; /* Giữ lại khoảng cách lề trái 20% */
+        padding: 10px; /* Giảm padding */
+        text-align: left; /* Căn chữ về phía trái */
+    }
+
+    .premium-wrapper {
+        padding: 10px; /* Giảm padding trong phần bao */
+        text-align: left; /* Căn chữ về phía trái */
+    }
+
+    .premium-wrapper h1 {
+        font-size: 1.5rem; /* Giảm kích cỡ chữ tiêu đề */
+        text-align: left; /* Căn trái tiêu đề */
+    }
+
+    .premium-wrapper input[type="text"] {
+        font-size: 14px; /* Điều chỉnh kích cỡ font input */
+    }
+
+    .premium-wrapper button {
+        font-size: 14px; /* Điều chỉnh kích cỡ font cho nút */
+    }
+
+    .premium-wrapper .filter-buttons button {
+        font-size: 14px; /* Điều chỉnh kích cỡ font cho nút lọc */
+        padding: 8px 10px; /* Điều chỉnh padding */
+    }
+
+    .premium-wrapper th,
+    .premium-wrapper td {
+        padding: 10px; /* Điều chỉnh padding cho các ô trong bảng */
+        text-align: left; /* Căn trái các nội dung trong bảng */
+    }
+
+    /* Stack table into cards for mobile */
+    .premium-wrapper table {
+        display: block;
+    }
+
+    .premium-wrapper thead {
+        display: none; /* Ẩn phần tiêu đề bảng */
+    }
+
+    .premium-wrapper tr {
+        display: block;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        padding: 10px;
+    }
+
+    .premium-wrapper td {
+        display: block;
+        text-align: left; /* Căn trái chữ trong ô */
+        padding: 10px;
+    }
+
+    .premium-wrapper td:before {
+        content: attr(data-label); /* Thêm label vào data */
+        float: left;
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+}
+
+@media (max-width: 480px) {
+    .premium-container {
+        margin-left: 20%; /* Lề trái 20% */
+        text-align: left; /* Căn trái chữ */
+    }
+
+    .premium-wrapper h1 {
+        font-size: 1.2rem; /* Tiếp tục giảm kích cỡ chữ cho màn hình nhỏ hơn */
+        text-align: left; /* Căn trái tiêu đề */
+    }
+
+    .premium-wrapper input[type="text"],
+    .premium-wrapper button {
+        font-size: 12px; /* Điều chỉnh kích cỡ chữ cho input và nút */
+    }
+
+    .premium-wrapper .filter-buttons button {
+        padding: 6px 8px; /* Điều chỉnh padding thêm */
+    }
+
+    .premium-wrapper th,
+    .premium-wrapper td {
+        padding: 8px; /* Điều chỉnh padding cho ô trong bảng */
+    }
+}

@@ -1,0 +1,669 @@
+.main-content {
+  /* font-family:  */
+  width: 104%;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  height: 146vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  /* gap: 10px; */
+  background-image: url('/public/img/background3.jpg');
+  background-size: cover;
+  position: relative;
+  left: 0%;
+  right: 0;
+}
+
+@media (min-width: 985px) and (max-width: 1500px) {
+  .main-content{
+    width: 102%;
+    left: 3px;
+  }
+}
+.profile-section {
+  position: relative;
+  margin-bottom: 70px !important;
+  user-select: none;
+  line-height: 1.05;
+  z-index: 100;
+  background-color: white;
+  flex-direction: column;
+  display: flex;
+  width: 80%;
+  height: auto;
+  transition: height 0.3s ease-in-out; 
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 41px;
+  padding-bottom: 18px;
+}
+
+p{
+  margin-bottom: 5px;
+}
+
+.profile-picture-and-detail {
+  position: relative;
+  margin-bottom: 5px;
+  justify-content: flex-start;
+  text-align: center;
+  display: flex;
+  width: 100%;
+  /* height: 20%; */
+}
+
+.profile-picture {
+  pointer-events: none;
+  width: 150px;
+  height: 150px;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  /* margin-right: 20px;
+  margin-left: 20px; */
+}
+
+.profile-details {
+  font-weight: 400;
+  margin-left: 3vw;
+  text-align: left;
+  justify-content: center;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  font-size: large;
+}
+
+.profile-info{
+  margin-top: 4px;
+  margin-left: 10px;
+  font-weight: 400;
+  text-align: left;
+  justify-content: center;
+  width: 92%;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  font-size: large;
+}
+
+.detail-line {
+  width: 100%;
+  height: 20px;
+  border-radius: 10px;
+}
+
+.divider {
+  width: 100%;
+  border: 1px solid #181717;
+}
+
+.image-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 93%;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 15px;
+}
+
+.main-image {
+  pointer-events: none;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 5 / 3.3;
+  background-color: #a7a5a5;
+  border-radius: 16px;
+  position: relative;
+}
+
+.upcoming-partners {
+  display: flex;
+  justify-content: space-around; /* Giữ đều các ảnh */
+}
+
+.partner-image {
+  width: 100px;
+  height: 100px;
+  margin: 0 10px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+
+.partner-image.empty {
+  background-color: #f0f0f0; /* Màu nền cho khung trống */
+  border: 1px solid #ddd; /* Đường viền cho khung trống */
+}
+
+.action-buttons {
+  z-index: 100;
+  position: fixed;
+  bottom: 0;
+  width: 40%;
+  padding: 10px;
+  background-color: rgba(17, 17, 17, 0.90);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+.button-group {
+  display: flex;
+  gap: 4.5vw;
+}
+
+.action-button {
+  /* margin-left: 27px;
+  margin-right: 27px; */
+  width: 40px;
+  height: 40px;
+  position: relative;
+  background-color: transparent;
+  background-size: cover; /* Đảm bảo ảnh lấp đầy nút */
+  background-position: center; /* Căn giữa ảnh */
+  background-repeat: no-repeat; /* Không lặp lại ảnh */
+  cursor: pointer;
+  border: none;
+  object-fit: cover;
+}
+
+.action-button:hover {
+  opacity: 0.7; /* Mờ nhẹ khi hover, nhưng không biến mất */
+  visibility: visible; /* Đảm bảo không ẩn ảnh */
+  display: block; /* Đảm bảo ảnh không bị xóa khỏi DOM */
+
+}
+
+.dislike-button {
+  background-image: url('https://img.icons8.com/ios-filled/50/FFFFFF/return.png');
+}
+
+.like-button {
+  background-image: url('https://img.icons8.com/material/24/F25081/like--v1.png');
+}
+
+.report-button {
+  background-image: url('https://img.icons8.com/ios/50/FFFFFF/warning-shield.png');
+}
+
+.gift-button {
+  background-image: url('https://img.icons8.com/windows/32/FFFFFF/gift.png');
+}
+
+.moreinfor-button {
+  background-image: url('https://img.icons8.com/ios/50/FFFFFF/info--v1.png') !important;
+}
+
+.upcoming-partners {
+  /* margin-top: 10px; */
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.upcoming-partners img {
+  user-select: none;
+  pointer-events: none;
+  filter: blur(3px);
+}
+
+.partner-image {
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+
+.logo{
+  display: none !important;
+}
+
+@media (max-width: 800px) {
+  .ending{
+    margin-top: -3vh;
+  }
+
+  
+  /* .profile-info{
+
+  } */
+  hr{
+    margin-top: 5px !important;
+    margin-bottom: 10px !important;
+  }
+  .hidden-element {
+    display: none;
+  }
+  /* .action-buttons{
+    width: 130%;
+    padding: 8px;
+  } */
+  .profile-picture{
+    border: 2px solid #4174c7 !important; /* Độ rộng 2px, kiểu solid, màu đen */
+    margin-top: 0px;
+    width: 90px;
+    height: 90px;
+    margin-right: 10px;
+    margin-left: 0px;
+  }
+  .main-image{
+    width: 100%;
+    padding: 0px;
+    margin-bottom: 13px;
+
+  }
+  .image-section{
+    padding: 0px;
+    width: 100%;
+  }
+  .profile-section {
+    margin-bottom: 0px !important;
+    height: fit-content;
+    /* padding-bottom: 30px; */
+    margin-top: 0px;
+    width: 85%; /* Chiếm toàn bộ chiều rộng trên màn hình nhỏ */
+    padding: 10px; /* Giảm padding để tiết kiệm không gian */
+    border-radius: 32px;
+  }
+  .profile-details{ /* Giảm kích thước font để vừa với màn hình nhỏ */
+    padding: 5px; /* Giảm padding để nội dung không bị quá chật chội */
+    gap: 0px;
+  }
+  .profile-info{
+    margin-left: 0px;
+    font-size: 14px; /* Giảm kích thước font để vừa với màn hình nhỏ */
+    padding: 5px; /* Giảm padding để nội dung không bị quá chật chội */
+    gap: 0px;
+    margin-bottom: 0px !important;
+  }
+  .profile-picture-and-detail{
+    margin-top: 3px;
+    height: auto;
+    justify-content: center;
+    text-align: center;
+  }
+  .logo{
+    display:block !important;
+  }
+  .main-image{
+    border-radius: 32px;
+  }
+  .action-button{
+    width: 30px;
+    height: 30px;
+  }
+  .prev-button {
+    left: 0px !important; /* Đặt nút prev-button ở bên trái */
+  }
+  
+  .next-button {
+    right: 0px !important; /* Đặt nút next-button ở bên phải */
+  }
+  .bio{
+    margin-bottom: -2vh !important;
+  }
+
+}
+
+
+.brand-name2 {
+  color: #AC4295;
+  font-size: 30px;
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  /* background-color: #f8e1f1 !important; */
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: -1vh;
+  margin-right: 5%;
+}
+.brand-name2:hover{
+  /* background-color: #f8e1f1 !important; */
+}
+
+.prev-button,
+.next-button {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5); /* Nền đen với độ trong suốt */
+  border: none;
+  color: white;
+  font-size: 24px;
+  /* padding: 10px 20px; */
+  cursor: pointer;
+  opacity: 0.0; /* Độ trong suốt */
+  transition: opacity 0.3s ease; /* Hiệu ứng khi hover */
+}
+.prev-button {
+  left: 0; /* Đặt nút prev-button ở bên trái */
+}
+
+.next-button {
+  right: 0; /* Đặt nút next-button ở bên phải */
+}
+.prev-button:hover,
+.next-button:hover {
+  opacity: 0.0; /* Tăng độ rõ khi hover */
+}
+
+.additional-info {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+.address {
+  margin-bottom: 5px !important;
+}
+.profile-col{
+  display: flex;
+}
+.profile-col2{
+  margin-right: 20%;
+}
+
+.profile-col3{
+  margin-bottom: 7%;
+}
+
+.profile-col4{
+  margin-top: -1%;
+}
+
+
+
+.verified-icon{
+  pointer-events: none;
+  position: absolute;
+  max-width: 40px;
+  max-height: 40px;
+  z-index: 10;
+  /* top: 0;
+  left: 0;  */
+}
+
+
+
+/* MainContent.css */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Màu nền mờ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Đặt trên cùng */
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Report modal overlay */
+.modal-overlay {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Report modal content */
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 400px;
+  max-width: 90%;
+  text-align: center;
+}
+
+.modal-content h3 {
+  margin-bottom: 15px;
+  color: #5c06a0;
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+.modal-content select,
+.modal-content textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+.modal-content select {
+  height: 35px;
+}
+
+/* Modal action buttons */
+.modal-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-actions2 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.cancel-button,
+.submit-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+.cancel-button {
+  background-color: #e0e0e0;
+}
+
+.submit-button {
+  background-color: #5c06a0;
+  color: #fff;
+}
+
+.cancel-button:hover {
+  background-color: #d3d3d3;
+}
+
+.submit-button:hover {
+  background-color: #4a0578;
+}
+
+/* Custom styling for textarea */
+textarea {
+  font-size: 14px;
+  resize: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .report-modal-content {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .profile-details{
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 993px) {
+  .action-buttons{
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile-col{
+    display: block;
+  }
+  .image-section {
+    padding-bottom: 0px;
+  }
+  .visible{
+    display: none;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1300px) {
+  profile-picture {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.empty-content{
+  height:82vh;
+}
+.user-avatar {
+  height: fit-content;
+  margin-right: 2vw;
+  width: 25%;                /* Chiếm 30% chiều ngang của thẻ cha */
+  aspect-ratio: 1 / 1 ;       
+  position: relative;
+  overflow: hidden;
+}
+
+.user-avatar img {
+  width: 100%;               /* Ảnh tự co theo chiều ngang của thẻ cha */
+  height: 100%;              /* Đảm bảo ảnh bao phủ chiều cao của thẻ cha */
+  object-fit: cover;     
+  top: 16vh;
+  right: 0vw;
+}   
+/* @media (max-width: 540px) {
+  .user-avatar{
+    margin-top: 2%;
+  }
+} */
+
+@media (min-width: 300px) and (max-width: 370px) {
+  .user-avatar{
+    margin-top: 6vh;
+  }
+  .profile-section{
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 370px) and (max-width: 460px) {
+  .user-avatar{
+    margin-top: 4%;
+  }
+}
+@media (max-width: 992px) {
+  .main-content{
+    /* position: absolute; */
+    width: 104vw;
+    left: -50px;
+    top: 0;
+  }
+}
+/* media 870 */
+
+@media (max-width: 540px) {
+  .main-content{
+    height: 104%;
+  }
+}
+
+@media (min-width: 540px) and (max-width: 650px) {
+  .main-content{
+    height: 109%;
+  }
+}
+@media (min-width: 650px) and (max-width: 780px) {
+  .main-content{
+    height: 114%;
+  }
+}
+@media (min-width: 780px) and (max-width: 870px) {
+  .main-content{
+    height: 119%;
+  }
+}
+
+@media (max-width: 330px) {
+  .user-avatar img {
+    width: 100%;               
+    height: 100%;              
+    object-fit: cover;     
+    top: 4.5vh;
+    right: 0vw;
+  }
+  .verified-icon{
+    max-width: 20px;  
+    max-height: 20px;
+  }
+}
+
+@media (min-width: 330px) and (max-width: 650px) {
+  .user-avatar img {
+    width: 100%;               
+    height: 100%;             
+    object-fit: cover;     
+    top: 7vh;
+    right: -0.5vw;
+  }
+  .verified-icon{
+    max-width: 35px;
+    max-height: 35px;
+  }
+}
+@media (min-width: 970px) and (max-width: 1300px) {
+  .user-avatar img {
+    width: 100%;              
+    height: 100%;             
+    object-fit: cover;     
+    top: 11vh;
+    right: -0.2vw;
+  }
+  .verified-icon{
+    max-width: 40px;
+    max-height: 40px;
+  }
+}
+@media (min-width: 993px) and (max-width: 1125px) {
+  .main-content{
+    width: 106% !important;
+  }
+}

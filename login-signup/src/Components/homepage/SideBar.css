@@ -1,0 +1,122 @@
+.sidebar-container-normal {
+    position: fixed;
+    z-index: 1;  
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    max-width: 100%;
+    height: 100% !important;
+    background-color: #5d47c3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .banner {
+    margin-top: 10px;
+    width: 100%;
+    padding: 5px ;
+    background-color: rgba(0, 0, 0, 0.47);
+    color: #fff;
+    border-radius: 32px;
+    text-align: center;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 18px;
+    border: 1px solid white;
+  }
+  
+  .section {
+    width: 100%;
+    /* padding: 15px; */
+    background-color: white;
+    border-radius: 20px;
+    /* border: 1px solid #FAF2F2; */
+  }
+  
+  .section img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+
+  .section-title {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 20px;
+    color: black;
+  }
+
+  .refresh-button {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/860/860820.png');
+    width: 22px;
+    height: 22px;
+    position: relative;
+    background-color: transparent;
+    background-size: cover; /* Đảm bảo ảnh lấp đầy nút */
+    background-position: center; /* Căn giữa ảnh */
+    background-repeat: no-repeat; /* Không lặp lại ảnh */
+    cursor: pointer;
+    border: none;
+    object-fit: cover;
+  }
+
+  .refresh-button:hover {
+    opacity: 0.7; /* Mờ nhẹ khi hover, nhưng không biến mất */
+    visibility: visible; /* Đảm bảo không ẩn ảnh */
+    display: block; /* Đảm bảo ảnh không bị xóa khỏi DOM */
+  
+  }
+
+  .refresh-button img{
+    width: 22px;
+    height: 22px;
+  }
+  
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .list-group {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+  
+  .list-group-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .avatar {
+    width: 26px;
+    height: 26px;
+    background-color: #A7A5A5;
+    border-radius: 50%;
+  }
+  
+  .notification-text {
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 15px;
+    color: black;
+  }
+  
+  .search-icon {
+    margin-left: 125px;
+    width: 25px;
+    height: 25px;
+  }
+
+  @media (max-width: 1200px) {
+    .sidebar-container-normal{
+      width: 220px;
+    }
+  }

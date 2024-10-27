@@ -1,0 +1,298 @@
+.nav-field {
+  z-index: 3;
+  left: 0;
+  position: fixed;
+    height: 100%;
+    background: white;
+    gap: 45px;
+  }
+  
+  .brand-name {
+    justify-content: center;
+    color: #AC4295;
+    font-size: 40px;
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: 400;
+    text-align: center;
+  }
+  
+  .nav-buttons {
+    margin-top: 20px;
+    gap: 20px;
+  }
+  
+  .nav-item {
+    display: flex;
+    align-items: center;
+    padding-left: 10px !important;
+    padding-bottom: 10px;
+    width: 100%;
+    text-decoration: none; /* Loại bỏ dấu gạch chân */
+    color: inherit; 
+  }
+  
+  .nav-item span {
+    font-size: 18.67px;
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: 400;
+    color: black;
+    margin-left: 10px;
+  }
+  
+  .brand-name:hover{
+    background-color: white !important;
+  }
+  
+  button{
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+    border-radius: 8px !important;
+  }
+
+  .nav-item{
+    padding: 5px ;
+  }
+
+  .active:hover {
+    text-decoration: none; /* Loại bỏ dấu gạch chân */
+    color: inherit; 
+    background: rgba(183, 31, 255, 0.35);
+  }
+  
+  .nav-item img {
+    max-width: 22px;
+    max-height: 22px;
+  }
+
+  .class-premium{
+    margin-top: auto;
+  }
+  
+  .btn-premium {
+    text-decoration: none !important; /* Loại bỏ dấu gạch chân */
+    color: inherit !important; 
+    margin-left: -1vw;
+    background: #EFA41A !important;
+    border-radius: 33px !important;
+    border: 1.27px solid white !important;
+    color: #592854 !important;
+    font-size: 20px !important;
+    font-weight: 90px !important;
+    font-family: 'Julius Sans One', sans-serif !important;
+    width: 206px !important;
+    height: 46px !important;
+  }
+  
+  .btn-premium:hover {
+    text-decoration: none !important; /* Loại bỏ dấu gạch chân */
+    color: inherit !important; 
+    background-color: #d58e16 !important;
+  }
+
+/* Nút toggle cho màn hình nhỏ hơn 1200px */
+.nav-toggle {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1050;
+  cursor: pointer;
+}
+
+/* Điều chỉnh hiển thị navigation bar cho màn hình nhỏ hơn 1200px */
+.nav-field-mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 150px;
+  background-color: #fff;
+  z-index: 1040;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-field-mobile.hide {
+  transform: translateX(-100%);
+}
+
+.nav-field-mobile.show {
+  transform: translateX(0);
+}
+
+/* Điều chỉnh icon và các nút trong NavigationField */
+.nav-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.nav-item img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.btn-premium {
+  background-color: gold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media (min-width: 1200px) {
+  
+  .nav-field-mobile {
+    display: none;
+  }
+  .nav-field{
+    max-width: 100%;
+  }
+}
+.active2:hover {
+  text-decoration: none; /* Loại bỏ dấu gạch chân */
+  color: inherit; 
+  background: rgba(183, 31, 255, 0.35);
+}
+
+.nav-item2 {
+  text-decoration: none; /* Loại bỏ dấu gạch chân */
+  color: inherit; 
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 5px ;
+}
+.nav-item2 span {
+  font-size: 14px;
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: 400;
+  color: black;
+  margin-left: 10px;
+}
+.nav-item2 img {
+  max-width: 22px;
+  max-height: 22px;
+}
+.nav-item2 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.btn-premium2 {
+  margin-left: -1vw;
+  text-decoration: none !important; /* Loại bỏ dấu gạch chân */
+  color: inherit !important; 
+  margin-top: 10px !important;
+  background: #EFA41A !important;
+  border-radius: 33px !important;
+  border: 1.27px solid white !important;
+  color: #592854 !important;
+  font-size: 13px !important;
+  font-weight: 100px !important;
+  font-family: 'Julius Sans One', sans-serif !important;
+  width: 100px !important;
+  height: 46px !important;
+}
+
+.btn-premium2:hover {
+  text-decoration: none !important; /* Loại bỏ dấu gạch chân */
+  color: inherit !important; 
+  background-color: #d58e16 !important;
+}
+.no-underline{
+  text-decoration: none !important; /* Loại bỏ dấu gạch chân */
+}
+
+/* Thanh điều hướng ngang cho màn hình nhỏ hơn 993px */
+.nav-field-horizontal {
+  left: 0;
+  z-index: 3;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(17, 17, 17, 0.90);
+  display: flex;
+  justify-content: space-around; /* Giãn đều các icon ra */
+  padding: 10px 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Đổ bóng cho thanh điều hướng */
+}
+
+.nav-field-horizontal .nav-item-horizontal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #000;
+}
+
+.nav-field-horizontal .nav-item-horizontal img {
+  width: 33px; /* Kích thước icon */
+  height: 33px;
+}
+
+@media (min-width: 993px) {
+  .nav-field-horizontal {
+    display: none; /* Ẩn thanh điều hướng ngang khi màn hình lớn hơn 993px */
+  }
+}
+
+/* Ẩn menu mobile cũ */
+.nav-field-mobile {
+  display: none;
+}
+
+
+@media (max-width: 1200px) {
+  .p-4{
+    padding: 0px !important;
+  }
+  .nav-text {
+    display: none; 
+  }
+  .nav-field{
+    max-width: 70px;
+  }
+  .nav-item img{
+    position: absolute;
+    margin-left: 0.5vw;
+  }
+  .header-icon2{
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin-left: 0px;
+  }
+  .brand-name{
+    display: none;
+  }
+  .btn-premium{
+    display: none !important;
+  }
+  .icon-premium{
+    margin-top: auto;
+  }
+  .icon-premium img{
+    width: 30px;
+    height: 30px;
+    margin-left: 0px;
+    
+  }
+}
+
+@media (min-width: 1200px) {
+  .header-icon2{
+    max-width: 50px;
+    max-height: 50px;
+    display: none;
+  }
+  .icon-premium{
+    display: none;
+  }
+  .btn-premium{
+    display: block;
+  }
+}

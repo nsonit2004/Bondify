@@ -1,0 +1,153 @@
+.header {
+  background-color: #ffffff; /* Màu nền trắng cho header */
+  position: relative;
+  width: 100%;
+  z-index: 1000; /* Đảm bảo header luôn nằm trên các phần khác */
+}
+
+.navbar-custom {
+  background-color: #ffffff; /* Màu nền trắng cho navbar */
+  padding: 15px 30px; /* Thêm padding để tạo không gian cho navbar */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Thêm bóng để làm nổi bật navbar */
+}
+
+.navbar-custom .brand {
+  color: #5c06a0; /* Màu chữ tím */
+  font-family: 'Julius Sans One', sans-serif; /* Font chữ cho nút */
+  font-size: 2rem; /* Kích thước chữ lớn hơn cho logo */
+  text-transform: uppercase; /* Viết hoa cho logo */
+  text-decoration: none; /* Bỏ gạch chân */
+  transition: color 0.3s ease; /* Thêm hiệu ứng chuyển màu khi hover */
+}
+
+.navbar-custom .brand:hover {
+  color: #3f0486; /* Màu khi hover trên logo (tím đậm hơn) */
+}
+
+.navbar-custom .nav-link-custom {
+  color: #5c06a0; /* Màu chữ tím */
+  margin-left: 20px; /* Tạo khoảng cách giữa các liên kết */
+  font-size: 1.2rem; /* Kích thước chữ */
+  transition: color 0.3s ease, text-decoration 0.3s ease; /* Hiệu ứng chuyển màu và gạch chân khi hover */
+  text-decoration: none; /* Bỏ gạch chân mặc định */
+}
+
+/* Hiệu ứng khi hover cho các liên kết */
+.navbar-custom .nav-link-custom:hover {
+  color: #c086fa; /* Màu khi hover trên các liên kết */
+  text-decoration: underline; /* Thêm gạch chân khi hover trên các liên kết chính */
+}
+
+/* Cấu hình cho dropdown */
+.navbar-custom .dropdown-menu {
+  background-color: #f8f9fa; /* Màu nền nhẹ cho menu dropdown */
+  border: none; /* Bỏ đường viền */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Thêm bóng cho dropdown */
+}
+
+.navbar-custom .dropdown-item-custom {
+  color: #5c06a0; /* Màu chữ tím cho các mục dropdown */
+  text-decoration: none; /* Bỏ gạch chân */
+  padding: 10px 20px; /* Thêm padding để tạo không gian cho các mục dropdown */
+  transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu nền */
+}
+
+/* Hiệu ứng khi hover trên các mục dropdown */
+.navbar-custom .dropdown-item-custom:hover {
+  background-color: #e9ecef; /* Màu nền khi hover */
+  color: #5c06a0; /* Màu chữ không đổi khi hover */
+}
+
+/* Kiểu cho nút Login */
+.navbar-custom .login-button {
+  background-color: #5c06a0; /* Màu nền cho nút login */
+  color: white !important; /* Màu chữ trắng cho nút login */
+  border: none; /* Bỏ đường viền */
+  border-radius: 30px; /* Bo góc để tạo hình dạng tròn */
+  padding: 12px 50px; /* Thêm padding để nút dài hơn và thoải mái hơn */
+
+  font-size: 1.2rem !important; /* Kích thước chữ */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Hiệu ứng chuyển màu và hiệu ứng phóng to */
+  cursor: pointer; /* Con trỏ chuột khi hover */
+  text-decoration: none !important; /* Bỏ gạch chân cho nút login */
+}
+
+.navbar-custom .login-button:hover {
+  background-color: #3f0486; /* Màu nền khi hover trên nút login */
+  color: #ffffff; /* Màu chữ không đổi khi hover */
+  transform: scale(1.05); /* Hiệu ứng phóng to nhẹ khi hover */
+}
+.navbar-custom .logo {
+  width: 40px; /* Adjust the width as necessary */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Space between the logo and text */
+  vertical-align: middle; /* Align the logo with the text */
+}
+.language-link {
+  margin-left: -15px; /* Adjust the left margin of the Language dropdown */
+}
+
+.flag-icon {
+  width: 20px; /* Size of the flag icon */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 8px; /* Space between flag and text */
+}
+
+/* Other existing styles remain unchanged */
+
+/* Header.css */
+/* Header.css */
+
+/* Header.css */
+
+
+
+@media (max-width: 992px) {
+  .navbar-custom .nav-link-custom {
+    font-size: 1rem; /* Kích thước chữ nhỏ hơn cho các liên kết */
+    margin-left: 10px; /* Giảm khoảng cách giữa các liên kết */
+  }
+
+  .navbar-custom .brand {
+    font-size: 1.5rem; /* Kích thước chữ logo nhỏ hơn */
+  }
+
+  /* Điều chỉnh nút Login trên màn hình nhỏ */
+  .navbar-custom .ms-auto {
+    display: flex;
+    justify-content: center; /* Căn giữa nút login */
+    width: 100%; /* Đảm bảo nút login nằm trong toàn bộ chiều rộng vùng chứa */
+  }
+
+  /* Căn giữa nút login */
+  .navbar-custom .login-button {
+    padding: 8px 20px; /* Giảm padding cho nút nhỏ hơn */
+    font-size: 1rem; /* Kích thước chữ nhỏ hơn */
+    max-width: 150px; /* Giới hạn chiều rộng tối đa của nút login */
+    width: auto; /* Đảm bảo nút chỉ chiếm không gian vừa đủ */
+    text-align: center; /* Căn giữa chữ trong nút */
+    margin: 0 auto; /* Đảm bảo nút được căn giữa trong vùng chứa */
+    margin-top: 10px;
+  }
+
+  /* Điều chỉnh dropdown ngôn ngữ trên màn hình nhỏ */
+  .navbar-custom .language-link {
+    margin-left: 0; /* Xóa margin trái */
+    padding-left: 25px; /* Xóa padding trái để căn chỉnh */
+    
+    width: 100%; /* Đảm bảo dropdown chiếm toàn bộ chiều rộng */
+  }
+
+  /* Điều chỉnh dropdown menu để căn giữa */
+  .navbar-custom .dropdown-menu {
+    text-align: center; /* Căn giữa các mục trong dropdown */
+  }
+
+  /* Điều chỉnh kích thước của icon lá cờ trong dropdown */
+  .navbar-custom .flag-icon {
+    width: 16px; /* Kích thước nhỏ hơn cho icon lá cờ */
+    margin-right: 5px; /* Giảm khoảng cách giữa icon và chữ */
+  }
+}
+
+

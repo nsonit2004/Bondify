@@ -1,0 +1,318 @@
+/* Container and Background */
+.login-container {
+  width: 100%;
+  height: 100vh; /* Đảm bảo chiều cao của container bằng chiều cao của màn hình */
+  display: flex;
+  justify-content: flex-start; /* Canh trái cho hộp đăng nhập */
+  align-items: stretch; /* Đảm bảo hộp đăng nhập chiếm toàn bộ chiều cao */
+  background-image: url("/public/img/loginphoto.jpg");
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #6a0dad;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Login Box */
+.login-box {
+  width: 100%;
+  max-width: 400px; /* Giới hạn chiều rộng của hộp */
+  padding: 60px 40px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-height: 1000vh; /* Đảm bảo hộp không tràn khỏi màn hình */
+  overflow-y: auto; /* Thêm thanh cuộn nếu cần */
+}
+
+/* Title */
+.login-title {
+  color: black;
+  font-size: 40px;
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+
+/* Input Sections */
+.login-content {
+  width: 100%;
+}
+
+.login-input-section {
+  margin-bottom: 20px;
+}
+
+.login-label {
+  font-size: 16px;
+  color: black;
+  font-family: 'Julius Sans One', sans-serif;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Input Field */
+.login-input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #dcdcdc;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.login-input:focus {
+  border-color: #6a11cb;
+  box-shadow: 0 0 8px rgba(106, 17, 203, 0.2);
+}
+
+/* Password Wrapper */
+.login-password-wrapper {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+/* Buttons */
+.login-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #6a0dad;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 15px;
+}
+
+.login-button:hover {
+  background-color: #5a0ba0;
+}
+
+/* Google Login */
+.google-login-button {
+  display: flex;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 10%;
+}
+
+.google-login-image {
+  width: 100%;
+  max-width: 250px;
+}
+
+/* Or Divider */
+.login-or {
+  color: #000000;
+  font-size: 18px;
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Footer */
+.login-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Register Link */
+.register-link {
+  color: #0067CF;
+  font-size: 14px;
+  font-family: 'Julius Sans One', sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Độ mờ cao hơn cho nền overlay */
+  z-index: 999;
+  transition: opacity 0.3s ease;
+}
+
+/* Forgot Password Modal */
+.forgot-password-modal {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 40px 30px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 1;
+}
+
+/* Modal Title */
+.forgot-password-modal h2 {
+  font-size: 28px;
+  color: #333;
+  text-align: center;
+  font-family: 'Julius Sans One', sans-serif;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* Input Field */
+.forgot-password-modal input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #dcdcdc;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.forgot-password-modal input[type="email"]:focus {
+  border-color: #6a11cb;
+  box-shadow: 0 0 8px rgba(106, 17, 203, 0.2);
+}
+
+/* Submit Button */
+.forgot-password-modal button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #6a0dad;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.forgot-password-modal button[type="submit"]:hover {
+  background-color: #5a0ba0;
+}
+
+/* Error Message */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Success Message */
+.success-message {
+  color: green;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Close Button */
+.forgot-password-modal .close-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.2s ease;
+}
+
+.forgot-password-modal .close-modal:hover {
+  color: #333;
+}
+
+/* Hiệu ứng hover cho dòng "Forgot your password?" */
+.forgot-password-link {
+  color: #6a11cb; /* Màu ban đầu */
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Hiệu ứng chuyển màu */
+  cursor: pointer;
+}
+
+.forgot-password-link:hover {
+  color: #5a0ba0; /* Đổi màu khi hover */
+  text-shadow: 1px 1px 5px rgba(106, 17, 203, 0.5); /* Hiệu ứng bóng chữ */
+  text-decoration: underline; /* Thêm gạch chân */
+}
+
+@media (max-width: 768px) {
+  .login-box {
+    padding: 40px 20px;
+    max-width: 100%; /* Đảm bảo hộp có thể vừa trên màn hình nhỏ */
+  }
+
+  .login-title {
+    font-size: 30px;
+  }
+
+  .login-input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .login-button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

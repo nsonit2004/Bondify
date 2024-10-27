@@ -1,0 +1,95 @@
+.payment-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    font-family: 'Julius Sans One', sans-serif;
+  }
+  
+  .payment-title {
+    color: #5c06a0;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .payment-description {
+    color: #333;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 600px;
+  }
+  
+  .qr-code-container {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 40px;
+  }
+  
+  
+  .qr-code {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .instructions {
+    font-size: 1rem;
+    color: #666;
+    text-align: center;
+    max-width: 600px;
+  }
+  
+  .subscription-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+    margin-top: 40px; /* Space above subscription options */
+  }
+  
+  .subscription-card {
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    max-width: 200px; /* Set a max width for the cards */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a slight shadow */
+    cursor: pointer; /* Pointer on hover */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+  }
+  
+  .subscription-card.selected {
+    border-color: #5c06a0; /* Highlight color for selected plan */
+    box-shadow: 0 4px 10px rgba(92, 6, 160, 0.3); /* Stronger shadow for selected */
+  }
+  
+  .subscription-title {
+    color: #5c06a0; /* Title color */
+    font-size: 1.5rem;
+    margin: 10px 0; /* Space above and below the title */
+  }
+  
+  .subscription-description {
+    color: #333;
+    font-size: 1rem;
+    margin-bottom: 15px; /* Space below the description */
+  }
+  
+  .select-plan-button {
+    background-color: #5c06a0; /* Button color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    padding: 10px 15px; /* Padding for button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+  }
+  
+  .select-plan-button:hover {
+    background-color: #4a05a0; /* Darker shade on hover */
+  }
+  

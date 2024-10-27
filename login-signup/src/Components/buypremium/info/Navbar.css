@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+
+.header {
+  background-color: #ffffff; /* Màu nền trắng */
+  top: 0; /* Gắn vào đầu trang */
+  width: 100%;
+  z-index: 1000; /* Đảm bảo nó nằm trên cùng */
+  font-family: 'Julius Sans One', sans-serif; /* Áp dụng font Julius Sans One cho toàn bộ navbar */
+}
+
+.navbar-custom {
+    position: sticky !important; /* Đặt navbar ở chế độ sticky */
+    top: 0; /* Đảm bảo navbar dính ở đầu trang */
+    background-color: #ffffff; /* Màu nền trắng */
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Đảm bảo nó nằm trên cùng */
+    font-family: 'Julius Sans One', sans-serif; /* Áp dụng font cho navbar */
+  }
+
+.navbar-custom .brand {
+  color: #5c06a0;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-custom .brand:hover {
+  color: #3f0486;
+}
+
+/* Đẩy các liên kết homepage và premium sang trái */
+.navbar-custom .me-auto {
+  margin-right: auto; /* Căn trái các liên kết */
+}
+
+.navbar-custom .nav-link-custom {
+  color: #5c06a0;
+  margin-left: 20px;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.navbar-custom .nav-link-custom:hover {
+  color: #c086fa;
+}
+
+/* Style cho nút Log Out */
+.logout-button {
+  background-color: #5c06a0;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 30px; /* Có thể điều chỉnh nếu muốn nhỏ hơn */
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #3f0486;
+  transform: scale(1.05);
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .navbar-custom .nav-link-custom {
+    font-size: 1rem;
+    margin-left: 10px;
+  }
+
+  .navbar-custom .brand {
+    font-size: 1.5rem;
+  }
+
+  .navbar-custom .logout-button {
+    padding: 4px 10px;
+    font-size: 1rem; /* Điều chỉnh kích thước nếu cần */
+  }
+  
+}

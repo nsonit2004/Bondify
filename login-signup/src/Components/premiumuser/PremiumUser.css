@@ -1,0 +1,61 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Chiếm toàn bộ chiều cao màn hình */
+}
+
+.row-container {
+  display: flex; /* Sử dụng flex để chia không gian */
+  flex: 1; /* Đảm bảo row chiếm toàn bộ chiều cao còn lại */
+}
+
+.navigation {
+  /* flex: 0 0 70px;  */
+  max-width: 100%;
+}
+
+.maincontent {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  flex: 1; /* MainContent chiếm không gian còn lại */
+  height: 100vh; /* Chiều cao chiếm toàn bộ màn hình */
+}
+
+.sidebar2 {
+  /* flex: 0 0 220px;  */
+  max-width: 100%;
+  height: 100vh; /* Chiều cao chiếm toàn bộ màn hình */
+}
+
+@media (max-width: 1200px) {
+  .navigation {
+    max-width: 50px;
+    padding-left: 0;
+    padding-right: 0;
+    flex: 0 0 70px; /* Giữ thanh điều hướng ở kích thước cố định 70px */
+  }
+
+  .maincontent {
+    flex: 1; /* MainContent tiếp tục chiếm không gian còn lại */
+    height: 100vh; /* Đảm bảo chiều cao vẫn là toàn bộ màn hình */
+  }
+
+  .sidebar2 {
+    flex: 0 0 220px; /* Sidebar vẫn giữ kích thước 220px */
+    height: 100vh; /* Sidebar vẫn giữ chiều cao toàn bộ màn hình */
+    position: relative;
+  }
+}
+
+
+
+@media (max-width: 992px) {
+  .element-to-hide {
+    display: none; /* Ẩn sidebar trên màn hình nhỏ hơn 992px */
+  }
+
+  .maincontent {
+    flex: 1;  
+    height: 100vh; /* Đảm bảo chiều cao toàn bộ màn hình */
+  }
+}

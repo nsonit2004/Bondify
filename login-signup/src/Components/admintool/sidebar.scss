@@ -1,0 +1,208 @@
+/* Sidebar Container */
+.sidebar-container {
+  width: 30%; /* Chiều rộng cố định cho sidebar */
+  height: 100%; /* Chiều cao toàn màn hình */
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff; /* Màu nền cho sidebar */
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Đổ bóng cho sidebar */
+  border-right: 2px solid #e0e0e0; /* Đường viền bên phải */
+  overflow: hidden; /* Đảm bảo nội dung không tràn ra ngoài */
+
+}
+
+/* Sidebar nội dung */
+.sidebar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Đảm bảo nội dung không tràn ra ngoài */
+}
+
+/* Admin Tools Header */
+.sidebar-header {
+  font-family: 'Julius Sans One', sans-serif;
+  padding: 20px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  white-space: nowrap;
+  font-size: x-large;
+  box-sizing: border-box; /* Đảm bảo padding không vượt quá chiều rộng */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-icon {
+  display: none; /* Ẩn icon trong trạng thái bình thường */
+  margin-right: 10px;
+}
+
+/* Menu Items */
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  font-family: 'Julius Sans One', sans-serif;
+  padding: 0;
+  color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  padding: 15px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active-link {
+  background-color: #8124c8;
+  color: #ffffff;
+}
+
+.sidebar ul li a:hover .sidebar-text,
+.sidebar ul li a.active-link .sidebar-text {
+  color: #ffffff;
+}
+
+.sidebar-text {
+  text-decoration: none;
+  opacity: 1;
+  white-space: nowrap;
+  font-size: larger;
+  margin-left: 20px;
+  color: #000000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+}
+
+/* Icons inside sidebar */
+.sidebar ul li .fa-icon {
+  font-size: 28px;
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+}
+
+/* Box cho nút Log Out */
+.logout-box {
+  margin-top: auto;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #e0e0e0;
+  background-color: #f8f8f8;
+}
+
+.logout-button {
+  padding: 10px 15px;
+  background-color: #8124c8;
+  border: none;
+  color: white;
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: large;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+  background-color: #5c06a0;
+}
+
+.logout-button .logout-text {
+  margin-left: 10px;
+}
+
+/* Active link */
+.active-link {
+  background-color: #8124c8;
+  color: #ffffff;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.header-icon {
+  display: none; /* Hidden in normal view */
+  width: 40px; /* Set a reasonable width */
+  height: 40px; /* Set a reasonable height */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .sidebar-container {
+    width: 60px; /* Giảm chiều rộng sidebar */
+  }
+
+
+  .sidebar-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* Adjust height to center logo properly */
+  }
+
+  .admin-text {
+    visibility: hidden;
+    width: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  .header-icon {
+    display: block; /* Show the icon */
+    font-size: 28px;
+    margin: 0; /* Remove any extra margins */
+  }
+
+  .sidebar ul li a {
+    padding: 15px;
+    justify-content: center;
+  }
+
+  .sidebar-text {
+    display: none; /* Chỉ hiện icon trong các mục */
+  }
+
+  .logout-box {
+    justify-content: center;
+
+    margin-bottom: 800px;
+  }
+
+  .logout-button {
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: auto;
+  }
+
+  .logout-text {
+    display: none; /* Ẩn chữ Log Out */
+  }
+}

@@ -1,0 +1,88 @@
+
+
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Đảm bảo chiều cao tối thiểu bằng 100% chiều cao màn hình */
+}
+
+.header {
+  flex-shrink: 0; /* Header không thay đổi kích thước */
+  position: sticky; /* Đặt vị trí sticky */
+  top: 0; /* Giữ header ở trên cùng */
+  z-index: 1000; /* Đảm bảo header nằm trên cùng các phần tử khác */
+  background-color: white; /* Đặt màu nền cho header */
+}
+
+.main-content {
+  flex-grow: 1; /* Body sẽ chiếm toàn bộ không gian còn lại */
+  display: flex;
+  justify-content: center; /* Căn giữa nội dung */
+  align-items: center; /* Căn giữa nội dung theo chiều dọc */
+  padding: 20px;
+  position: relative; /* Cần thiết cho overlay */
+  background-image: url('/public/img/background3.jpg'); /* Hình nền */
+  background-size: cover; /* Đảm bảo hình ảnh bao phủ toàn bộ không gian */
+  background-position: center; /* Căn giữa hình nền */
+  background-repeat: no-repeat; /* Không lặp lại hình nền */
+  background-attachment: fixed; /* Giữ hình nền cố định khi cuộn */
+}
+
+.overlay {
+  position: absolute; /* Đặt lớp overlay ở vị trí tuyệt đối */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Màu đen với độ trong suốt 50% */
+  z-index: 0; /* Đặt lớp overlay ở phía dưới */
+}
+
+.homepage-body {
+  text-align: center;
+  padding: 50px; /* Thêm khoảng cách xung quanh để chữ nổi bật hơn */
+  position: relative; /* Cần thiết để căn chỉnh background */
+  z-index: 1; /* Đưa chữ lên trên background */
+  width: 100%; /* Chiếm toàn bộ chiều rộng */
+  height: 100%; /* Chiếm toàn bộ chiều cao */
+  display: flex; /* Để dễ dàng căn giữa nội dung bên trong */
+  flex-direction: column; /* Sắp xếp theo cột */
+  justify-content: center; /* Căn giữa nội dung theo chiều dọc */
+  min-height: calc(100vh - 80px); /* Đảm bảo chiều cao tối thiểu của body là chiều cao của viewport trừ chiều cao header và footer */
+}
+
+.slogan {
+  color: white;
+  font-size: 4rem; /* Tăng kích thước chữ để nổi bật hơn */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Thêm bóng chữ để nổi bật */
+}
+
+.register-button {
+  margin-top: 20px; /* Khoảng cách giữa chữ và nút */
+  padding: 15px 40px; /* Kích thước nút, tăng chiều rộng */
+  font-size: 1.2rem; /* Kích thước chữ trong nút */
+  color: white; /* Màu chữ */
+  background-color: #5c06a0; /* Màu nền của nút */
+  border: none; /* Không có đường viền */
+  border-radius: 30px; /* Bo góc cho nút thành hình tròn */
+  cursor: pointer; /* Con trỏ chuột khi hover lên nút */
+  transition: background-color 0.3s ease, transform 0.2s; /* Hiệu ứng chuyển màu khi hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Thêm bóng cho nút */
+}
+
+.register-button:hover {
+  background-color: #4a007f; /* Màu nền của nút khi hover */
+  transform: scale(1.05); /* Phóng to nút khi hover */
+}
+
+.footer {
+  flex-shrink: 0; /* Footer không thay đổi kích thước */
+  text-align: center;
+  padding: 1rem;
+  background-color: #5c06a0;
+  color: white;
+
+  position: relative; /* Đặt footer ở dưới cùng của body */
+  bottom: 0; /* Đẩy footer xuống dưới cùng */
+  width: 100%; /* Chiếm toàn bộ chiều rộng */
+}

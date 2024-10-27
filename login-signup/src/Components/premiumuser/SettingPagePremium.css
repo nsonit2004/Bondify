@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+
+/* Outer wrapper to control background and centering */
+.setting-page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.5);
+  background-image: url('/public/img/backgrounduser.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.setting-page-container {
+  width: 90vw;
+  height: 90vh;
+  background: white;
+  padding: 2rem; /* Use rem for better responsiveness */
+  border-radius: 1.25rem; /* Adjusted for better scaling */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Dark theme mode for the container */
+.setting-page-wrapper.dark .setting-page-container {
+  background-color: #333;
+  color: white;
+}
+
+/* Header style */
+.header-normal {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 1rem; /* Add margin for spacing */
+}
+
+.setting-page-title {
+  font-family: 'Julius Sans One', sans-serif;
+  color: #5c06a0;
+  font-size: 2rem; /* Responsive size */
+  font-weight: bold;
+}
+
+.setting-page-version {
+  font-size: 1rem; /* Responsive size */
+  color: gray;
+}
+
+/* Toggle switch container */
+.toggle-container {
+  margin-top: 1rem; /* Adjust margin */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Switch styles */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  margin-right: 0.5rem; /* Adjust margin */
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* Theme toggle */
+input:checked + .slider {
+  background-color: #5c06a0;
+}
+
+input:not(:checked) + .slider {
+  background-color: #ccc;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Sun and moon icons */
+.switch.theme-toggle .slider .theme-icon {
+  position: absolute;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.switch.theme-toggle .slider .sun-icon {
+  right: 8px;
+}
+
+.switch.theme-toggle .slider .moon-icon {
+  left: 8px;
+}
+
+input:checked + .slider .sun-icon {
+  display: block;
+}
+
+input:checked + .slider .moon-icon {
+  display: block;
+}
+
+/* Light theme sun icon */
+.setting-page-wrapper .slider .sun-icon {
+  display: block;
+}
+
+.setting-page-wrapper .slider .moon-icon {
+  display: none;
+}
+
+/* Button styling */
+.custom-button {
+  margin-top: 1rem; /* Adjusted margin */
+  padding: 0.5rem 1rem; /* Smaller padding for compactness */
+  font-size: 0.9rem; /* Responsive size */
+  color: white;
+  border: none;
+  border-radius: 0.625rem; /* Adjusted for responsiveness */
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  width: auto; /* Reduced width */
+  text-align: center;
+  align-self: flex-start;
+}
+
+/* Subtle hover effect */
+.custom-button:hover {
+  transform: scale(1.03);
+}
+
+/* Button colors */
+.logout-button {
+  background-color: #5c06a0; /* Purple */
+}
+
+.logout-button:hover {
+  background-color: #4a007f;
+}
+
+.delete-button {
+  background-color: #ff4040; /* Red */
+}
+
+.delete-button:hover {
+  background-color: #d32f2f;
+}
+
+/* Popup Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup {
+  background-color: white;
+  padding: 1.25rem; /* Adjusted for better scaling */
+  border-radius: 0.625rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 90%; /* Responsive width */
+  max-width: 400px; /* Limit maximum width */
+}
+
+/* Dark theme popup */
+.setting-page-wrapper.dark .popup {
+  background-color: #444;
+  color: white;
+}
+
+.popup p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem; /* Adjusted for spacing */
+}
+
+/* Warning for delete account */
+.popup.delete-warning p {
+  color: #ff4040;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.popup-button {
+  margin: 0.625rem; /* Adjusted margin */
+  padding: 0.625rem 1rem; /* Responsive padding */
+  border: none;
+  border-radius: 0.625rem;
+  cursor: pointer;
+}
+
+.popup-button.confirm {
+  background-color: #5c06a0;
+  color: white;
+}
+
+.popup-button.cancel {
+  background-color: #ccc;
+}
+
+/* Dark theme button styles */
+.setting-page-wrapper.dark .popup-button.confirm {
+  background-color: #5c06a0;
+  color: white;
+}
+
+.setting-page-wrapper.dark .popup-button.cancel {
+  background-color: #777;
+}
+
+/* Delete Account Warning Popup */
+.popup.delete-warning {
+  background-color: white;
+  border: 2px solid #ff4040;
+}
+
+.setting-page-wrapper.dark .popup.delete-warning {
+  background-color: #444;
+  border-color: #ff4040;
+}
+
+/* Warning text styling */
+.popup.delete-warning p.warning-text {
+  color: #ff4040;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.625rem; /* Adjusted for spacing */
+}
+
+/* Specific styling for the warning message in dark mode */
+.setting-page-wrapper.dark .popup.delete-warning p.warning-text {
+  color: #ff6b6b;
+}
+
+/* Additional explanation text */
+.popup.delete-warning p.explanation-text {
+  color: #333;
+  font-size: 0.9rem; /* Adjusted for better readability */
+  margin-bottom: 0.9375rem; /* Adjusted for spacing */
+}
+
+.setting-page-wrapper.dark .popup.delete-warning p.explanation-text {
+  color: #ccc;
+}
+
+/* Theme toggle with icons (sun and moon) */
+.switch.theme-toggle .slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Dark and Light theme text and background */
+.setting-page-wrapper.dark .setting-page-container {
+  background-color: #333;
+  color: white;
+}
+
+.setting-page-wrapper .setting-page-container {
+  background-color: white;
+  color: #333;
+}
+
+.setting-page-wrapper.dark .setting-page-title {
+  color: #e0b0ff;
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+  .setting-page-title {
+    font-size: 1.8rem; /* Responsive font size */
+  }
+
+  .setting-page-version {
+    font-size: 0.9rem; /* Responsive font size */
+  }
+
+  .custom-button {
+    padding: 0.5rem 1rem; /* Ensure buttons are compact */
+    font-size: 0.85rem; /* Responsive font size */
+  }
+
+  .popup {
+    width: 90%; /* Full width on smaller screens */
+  }
+
+  .popup p {
+    font-size: 0.9rem; /* Responsive font size */
+  }
+}

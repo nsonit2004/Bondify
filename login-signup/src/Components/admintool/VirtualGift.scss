@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+
+.virtual-gift-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  font-family: 'Julius Sans One', sans-serif;
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-left: 40%;
+}
+
+.virtual-gift-container .create-sticker-btn,
+.virtual-gift-container .delete-gift-btn {
+  width: 100%;
+  max-width: 250px;
+  padding: 12px 0;
+  font-size: 18px;
+  margin: 10px 0;
+  text-align: center;
+  border-radius: 5px;
+  background-color: transparent; /* No background initially */
+  color: #5C06A0; /* Text color for Create Gift */
+  border: 2px solid transparent;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Create Gift button styles */
+.virtual-gift-container .create-sticker-btn {
+  border-color: #5C06A0; /* Border color */
+}
+
+.virtual-gift-container .create-sticker-btn:hover {
+  background-color: #5C06A0; /* Background color on hover */
+  color: white; /* Change text color to white */
+  border-color: #5C06A0; /* Border color */
+}
+
+.virtual-gift-container .create-sticker-btn:active {
+  background-color: #450472; /* Darker purple for active state */
+  color: white; /* Keep text white */
+  border-color: #450472; /* Darker purple border */
+}
+
+/* Delete Gift button styles */
+.virtual-gift-container .delete-gift-btn {
+  border-color: #ff0000; /* Red border */
+  color: #ff0000; /* Text color for Delete Gift */
+}
+
+.virtual-gift-container .delete-gift-btn:hover {
+  background-color: #ff0000; /* Red background color on hover */
+  color: white; /* Change text color to white */
+  border-color: #ff0000; /* Red border */
+}
+
+.virtual-gift-container .delete-gift-btn:active {
+  background-color: #cc0000; /* Darker red for active state */
+  color: white; /* Keep text white */
+  border-color: #cc0000; /* Darker red border */
+}
+
+
+.dropzone {
+  width: 100%;
+  max-width: 400px;
+  height: 200px;
+  border: 2px dashed #888;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  margin: 20px 0;
+  transition: border-color 0.3s ease;
+}
+
+.dropzone.active {
+  border-color: #28a745; /* Active dropzone color */
+}
+
+.preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Đảm bảo căn giữa theo chiều ngang */
+  margin-bottom: 20px;
+}
+
+.sticker-preview {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  object-fit: contain;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  
+}
+.sticker-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.sticker-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .virtual-gift-container{
+    margin-left: 15%;
+  }
+  .create-sticker-btn, .delete-gift-btn {
+    font-size: 16px;
+    max-width: 200px;
+  }
+
+  .dropzone {
+    max-width: 300px;
+    height: 150px;
+  }
+
+  .sticker-preview {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .create-sticker-btn, .delete-gift-btn {
+    font-size: 14px;
+    max-width: 180px;
+  }
+
+  .dropzone {
+    max-width: 250px;
+    height: 120px;
+  }
+
+  .sticker-preview {
+    max-width: 200px;
+  }
+}

@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+
+.view-report-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Julius Sans One', sans-serif; // Apply font family
+  margin-left: 40%;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+/* Report card styles */
+.report-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease; /* Add transition for hover effect */
+}
+
+.report-card:hover {
+  transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+/* Report information styles */
+.report-info {
+  flex-grow: 1;
+  margin-right: 20px; /* Space between info and button */
+}
+
+.report-info h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.report-info p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Ban button styles */
+.ban-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #dc3545; /* Red */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ban-btn:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+/* Modal styles */
+.modal-content {
+  border-radius: 10px; /* Rounded corners for the modal */
+  background-color: #fff; /* White background for the modal */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+  overflow: hidden; /* Prevent content overflow */
+}
+
+.modal-header {
+  background-color: #5c06a0; /* Deep purple background for header */
+  color: #fff; /* White text for contrast */
+  padding: 15px 20px; /* Add padding */
+  font-size: 20px; /* Increase font size for title */
+  border-bottom: 1px solid #ddd; /* Subtle border below header */
+}
+
+.modal-title {
+  font-family: 'Julius Sans One', sans-serif; // Apply font family for modal title
+}
+
+.modal-body {
+  font-family: 'Julius Sans One', sans-serif; // Apply font family for modal body
+  padding: 20px; /* Add padding to the modal body */
+  font-size: 16px; /* Increase font size for readability */
+  color: #333; /* Darker text for better readability */
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between; /* Space out buttons */
+  padding: 15px 20px; /* Add padding */
+  background-color: #f7f7f7; /* Light background for footer */
+  border-top: 1px solid #ddd; /* Subtle border above footer */
+}
+
+/* Button styles in modal */
+.modal-footer .btn {
+  padding: 10px 20px; /* Consistent button size */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners for buttons */
+  font-weight: 600; /* Bold text */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.modal-footer .cancel-btn {
+  background-color: #6c757d; /* Gray for cancel */
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.modal-footer .cancel-btn:hover {
+  background-color: #5a6268; /* Darker gray on hover */
+}
+
+.modal-footer .ban-btn {
+  background-color: #dc3545; /* Red for ban */
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.modal-footer .ban-btn:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .view-report-container {
+    padding: 10px; /* Adjust padding for smaller screens */
+    margin-left: 30px;
+  }
+
+  .report-card {
+    padding: 50px; /* Smaller padding for cards */
+  }
+
+  .ban-btn {
+    padding: 6px 12px; /* Smaller button */
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 12px; /* Adjust font size for smaller screens */
+  }
+
+  .report-info h4 {
+    font-size: 16px; /* Smaller font for report info */
+  }
+
+  .report-info p {
+    font-size: 12px; /* Smaller font for report details */
+  }
+}

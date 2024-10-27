@@ -1,0 +1,110 @@
+/* Popup Overlay */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  /* Popup Box */
+  .popup {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: popupScaleIn 0.4s ease;
+  }
+  
+  /* Close button in the top right corner */
+  .popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Hobby grid layout using flexbox */
+  .hobby-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center; /* To center the buttons */
+    margin: 20px 0;
+  }
+  
+  /* Hobby buttons styling */
+  .hobby-button {
+    padding: 8px 15px; /* Adjust padding to balance height and width */
+    border: 2px solid #5c06a0;
+    border-radius: 30px;
+    background: white;
+    color: #5c06a0;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background 0.3s, color 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap; /* Prevent text from breaking */
+    box-sizing: border-box;
+  }
+  
+  /* The button size will adapt to its text length naturally */
+  
+  /* Selected hobby button */
+  .hobby-button.selected {
+    background: #5c06a0;
+    color: white;
+  }
+  
+  /* Save button styling */
+  .save-button {
+    background: #5c06a0;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Error message styling */
+  .error-message {
+    color: red;
+    margin-top: 10px;
+  }
+  
+  /* Fade-in animation for overlay */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Scale-in animation for the popup */
+  @keyframes popupScaleIn {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  

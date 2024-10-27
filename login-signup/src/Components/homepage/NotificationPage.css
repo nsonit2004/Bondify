@@ -1,0 +1,138 @@
+Khôi Lưu
+/* Căn chỉnh lại html và body cho chiều cao 100% */
+html, body {
+    height: 100%; /* Đảm bảo chiều cao 100% cho html và body */
+    margin: 0; /* Loại bỏ margin mặc định */
+    padding: 0; /* Loại bỏ padding mặc định */
+}
+
+/* Thiết lập cho main-container */
+.main-container-noti {
+  font-family: 'Julius Sans One', sans-serif;
+  padding: 20px; /* Giảm padding để tiết kiệm không gian */
+  background-color: #ffffff; /* Đặt nền trắng cho trang */
+  border-radius: 10px; /* Bo góc */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bóng đổ */
+  width: 90%; /* Chiều rộng 90% để phù hợp với các màn hình nhỏ */
+  height: auto; /* Chiều cao tự động */
+  overflow-y: auto; /* Cuộn dọc nếu nội dung vượt quá chiều cao */
+  margin: 0 auto; /* Căn giữa trong viewport */
+  height: 100vh;
+  width: 100%;
+}
+
+/* Tiêu đề thông báo */
+.noti {
+  font-size: 2.5rem; /* Kích thước chữ lớn hơn cho tiêu đề */
+  margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+  text-align: left; /* Căn trái tiêu đề */
+}
+
+/* Danh sách thông báo */
+.notification-list-noti {
+  display: flex; /* Sử dụng flexbox để sắp xếp các thông báo */
+  flex-direction: column; /* Sắp xếp theo cột */
+  gap: 15px; /* Khoảng cách giữa các ô thông báo */
+}
+
+/* Mỗi ô thông báo */
+.notification-item {
+  position: relative; /* Thêm vị trí tương đối để làm ngữ cảnh cho phần tử con */
+  padding: 15px; /* Thêm padding cho ô thông báo */
+  border: 1px solid #5c06a0; /* Đường viền màu chủ đạo */
+  border-radius: 8px; /* Bo góc */
+  background-color: #f9f9f9; /* Nền ô thông báo */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Hiệu ứng chuyển đổi */
+  cursor: pointer; /* Con trỏ khi hover */
+  display: flex; /* Sử dụng flexbox để sắp xếp hình ảnh và nội dung */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bóng đổ */
+}
+
+/* Chỉ báo "New" */
+.new-indicator {
+  position: absolute; /* Đặt vị trí tuyệt đối */
+  top: 10px; /* Cách từ trên cùng */
+  right: 10px; /* Cách từ bên phải */
+  background-color: #5c06a0; /* Màu nền cho chỉ báo mới */
+  color: white; /* Màu chữ cho chỉ báo mới */
+  padding: 3px 8px; /* Padding cho chỉ báo mới */
+  border-radius: 5px; /* Bo góc cho chỉ báo mới */
+  font-size: 0.8em; /* Kích thước chữ cho chỉ báo mới */
+  z-index: 1; /* Đảm bảo nó nằm trên các phần tử khác */
+}
+
+/* Hiệu ứng hover cho ô thông báo */
+.notification-item:hover {
+  background-color: #e6e6e6; /* Thay đổi nền khi hover */
+}
+
+/* Hình ảnh thông báo */
+.notification-image {
+  width: 50px; /* Chiều rộng hình ảnh */
+  height: 50px; /* Chiều cao hình ảnh */
+  border-radius: 50%; /* Làm tròn hình ảnh */
+  margin-right: 15px; /* Khoảng cách giữa hình ảnh và nội dung */
+}
+
+/* Nội dung thông báo */
+.notification-content {
+  flex: 1; /* Cho phép nội dung chiếm phần còn lại của dòng */
+}
+
+/* Tiêu đề trong thông báo */
+.title-noti {
+  font-size: 1.2em; /* Kích thước tiêu đề */
+  margin: 0; /* Xóa margin */
+  font-weight: bold; /* Làm đậm tiêu đề */
+}
+
+/* Tin nhắn trong thông báo */
+.message-noti {
+  font-size: 0.95em; /* Kích thước tin nhắn */
+  margin: 5px 0; /* Khoảng cách giữa các dòng */
+}
+
+/* Thời gian thông báo */
+.notification-time {
+  font-size: 0.8em; /* Kích thước thời gian */
+  color: #888; /* Màu sắc cho thời gian */
+  margin-top: 5px; /* Khoảng cách trên cho thời gian */
+}
+
+/* Thông báo đã đọc */
+.read {
+  opacity: 0.7; /* Giảm độ đậm cho thông báo đã đọc */
+}
+
+/* Thông báo chưa đọc */
+.unread {
+  font-weight: bold; /* Làm đậm cho thông báo chưa đọc */
+}
+
+/* Responsive cho các màn hình nhỏ hơn */
+@media (max-width: 600px) {
+  .noti {
+      font-size: 2rem; /* Kích thước chữ nhỏ hơn cho tiêu đề */
+  }
+
+  .notification-item {
+      padding: 10px; /* Giảm padding cho ô thông báo */
+  }
+
+  .title {
+      font-size: 1.1em; /* Kích thước tiêu đề nhỏ hơn */
+  }
+
+  .message {
+      font-size: 0.85em; /* Kích thước tin nhắn nhỏ hơn */
+  }
+
+  .notification-time {
+      font-size: 0.75em; /* Kích thước thời gian nhỏ hơn */
+  }
+
+  .new-indicator {
+      font-size: 0.7em; /* Kích thước chữ cho chỉ báo nhỏ hơn */
+  }
+}

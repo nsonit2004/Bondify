@@ -1,0 +1,95 @@
+/* Tổng thể Sidebar */
+.sidebar-container-premium {
+  position: fixed;
+  z-index: 1;
+  padding: 15px;
+  width: 18vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, #7A378B, #66008d);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  /* box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); */
+  /* border-radius: 12px; */
+  right: 0;
+  overflow: hidden;
+}
+
+/* Banner trên cùng */
+.banner-premium {
+  width: 100%;
+  border-radius: 32px;
+  padding: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  text-align: center;
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 18px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Khu vực thông báo */
+.section-premium {
+  width: 100%;
+  height: 80vh; /* Chiếm 80% chiều cao màn hình */
+  background-color: white;
+  border-radius: 32px;
+  padding: 15px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tiêu đề danh sách */
+.section-title-premium {
+  padding: 15px 0;
+  text-align: center;
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 20px;
+  color: #333;
+  font-weight: bold;
+  border-bottom: 1px solid #eee;
+}
+
+/* Danh sách có thể cuộn */
+.list-group-premium {
+  flex: 1;
+  overflow-y: auto; /* Cho phép cuộn */
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Các mục trong danh sách */
+.list-group-item-premium {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #fafafa;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.list-group-item-premium:hover {
+  background-color: #f0f0f5;
+}
+
+.avatar-premium {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.notification-text-premium {
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 15px;
+  color: #555;
+}
+
+

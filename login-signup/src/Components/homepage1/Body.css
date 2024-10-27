@@ -1,0 +1,47 @@
+
+.homepage-body {
+  text-align: center;
+  padding: 50px; /* Thêm khoảng cách xung quanh để chữ nổi bật hơn */
+  position: relative; /* Cần thiết để căn chỉnh background */
+  z-index: 1; /* Đưa chữ lên trên background */
+  width: 100%; /* Chiếm toàn bộ chiều rộng */
+  height: 100%; /* Chiếm toàn bộ chiều cao */
+  display: flex; /* Để dễ dàng căn giữa nội dung bên trong */
+  flex-direction: column; /* Sắp xếp theo cột */
+  justify-content: center; /* Căn giữa nội dung theo chiều dọc */
+  min-height: calc(100vh - 80px); /* Đảm bảo chiều cao tối thiểu của body là chiều cao của viewport trừ chiều cao header và footer */
+}
+/* Body.css */
+.heart-logo {
+  width: 40px; /* Đặt kích thước logo */
+  height: auto; /* Giữ tỉ lệ cho logo */
+  margin-left: 10px; /* Khoảng cách giữa logo và slogan */
+  vertical-align: middle; /* Căn giữa logo theo chiều dọc với chữ */
+}
+
+.slogan {
+  color: white;
+  font-size: 5rem; /* Tăng kích thước chữ để nổi bật hơn */
+  font-weight: bold; /* Đặt chữ đậm hơn để dễ đọc hơn */
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7); /* Tăng độ lớn và độ mờ của bóng chữ để nổi bật */
+}
+
+.register-button {
+  margin: 20px auto; /* Căn giữa nút và thêm khoảng cách phía trên và dưới */
+  padding: 10px 25px; /* Kích thước nút, giảm chiều rộng và chiều cao */
+  font-size: 1.5rem; /* Tăng kích thước chữ trong nút */
+  color: white; /* Màu chữ */
+  background-color: #5c06a0; /* Màu nền của nút */
+  border: none; /* Không có đường viền */
+  border-radius: 20px; /* Bo góc cho nút thành hình tròn */
+  cursor: pointer; /* Con trỏ chuột khi hover lên nút */
+  transition: background-color 0.3s ease, transform 0.2s; /* Hiệu ứng chuyển màu khi hover */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Thêm bóng cho nút */
+  max-width: 200px; /* Giới hạn chiều rộng tối đa của nút */
+  display: block; /* Đảm bảo nút là một phần tử block để margin auto hoạt động */
+}
+
+.register-button:hover {
+  background-color: #4a007f; /* Màu nền của nút khi hover */
+  transform: scale(1.03); /* Phóng to nút khi hover */
+}

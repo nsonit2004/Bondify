@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+
+.premium-page {
+  font-family: 'Julius Sans One', sans-serif;
+  padding: 50px;
+}
+
+.premium-title {
+  color: #5c06a0;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.premium-description {
+  color: #333;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.comparison-title {
+  color: #5c06a0;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.comparison-table {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: white;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comparison-table thead th {
+  background-color: #5c06a0;
+  color: white;
+  text-align: center;
+  font-size: 1.3rem;
+  padding: 15px;
+}
+
+.comparison-table tbody td {
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.comparison-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.comparison-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.premium-page .premium-button {
+  display: block;
+  background-color: goldenrod !important; /* Force the color */
+  border-color: goldenrod !important; /* Force the border color */
+  color: white;
+  margin: 40px auto 0;
+  padding: 10px 20px; /* Smaller padding for compact size */
+  font-size: 1rem; /* Slightly smaller font size */
+  font-family: 'Julius Sans One', sans-serif;
+  border-radius: 30px;
+  width: 200px; /* Explicitly set width to make the button shorter */
+  text-align: center;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+  border: 2px solid goldenrod !important;
+}
+
+.premium-page .premium-button:hover {
+  background-color: darkgoldenrod !important;
+  border-color: darkgoldenrod !important;
+  transform: scale(1.05);
+}
+/* Existing styles... */
+.comparison-table tbody td {
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Color differentiation for the two columns */
+.comparison-table tbody td:nth-child(2) {
+  background-color: #f9e2f4; /* Light pink for Normal User column */
+}
+
+.comparison-table tbody td:nth-child(3) {
+  background-color: #e0f7d4; /* Light green for Premium User column */
+}
+
+/* Optional: Different text color for better readability */
+.comparison-table tbody td:nth-child(2),
+.comparison-table tbody td:nth-child(3) {
+  color: #333; /* Dark text for readability */
+}
+
+/* Ensure no border between rows for a cleaner look */
+.comparison-table tbody tr:last-child td {
+  border-bottom: none;
+}

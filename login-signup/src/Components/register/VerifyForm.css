@@ -1,0 +1,163 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background: white;
+}
+
+.verify-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    background: linear-gradient(135deg, #6a11cb 0%, #dee5f0 100%);
+}
+
+/* Container chính */
+.verification-form-container {
+    max-width: 100%;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #5C06A0; /* Màu viền cho form */
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff; /* Nền trắng cho form */
+    transition: transform 0.3s ease;
+}
+
+.verification-form-container:hover {
+    transform: scale(1.05); /* Hiệu ứng khi hover */
+}
+
+/* Tiêu đề */
+.verification-form h2 {
+    color: #5C06A0;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Nhãn */
+.verification-form label {
+    color: #5C06A0;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Input */
+.verification-form input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #5C06A0;
+    border-radius: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.verification-form input:focus {
+    border-color: #8338EC;
+    box-shadow: 0 0 5px rgba(129, 0, 255, 0.5);
+}
+
+/* Container nút */
+.verification-form .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.verification-form .submit-btn,
+.verification-form .cancel-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 48%;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Nút xác nhận */
+.verification-form .submit-btn {
+    background-color: #5C06A0;
+    color: white;
+}
+
+.verification-form .submit-btn:hover {
+    background-color: #6d2cb0;
+    box-shadow: 0 5px 15px rgba(92, 6, 160, 0.3);
+}
+
+/* Nút hủy */
+.verification-form .cancel-btn {
+    background-color: #E0E0E0;
+    color: #5C06A0;
+}
+
+.verification-form .cancel-btn:hover {
+    background-color: #d3d3d3;
+    box-shadow: 0 5px 15px rgba(224, 224, 224, 0.3);
+}
+
+/* Tin nhắn thông báo */
+.verification-form .success {
+    color: green;
+    margin-top: 15px;
+}
+
+.verification-form .error {
+    color: red;
+    margin-top: 15px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .verification-form-container {
+        max-width: 90%;
+        margin: 20px auto;
+    }
+
+    .verification-form h2 {
+        font-size: 1.8rem;
+    }
+
+    .verification-form input {
+        padding: 10px;
+    }
+
+    .verification-form .submit-btn, 
+    .verification-form .cancel-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .verification-form-container {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .verification-form h2 {
+        font-size: 1.6rem;
+    }
+
+    .verification-form input {
+        padding: 8px;
+    }
+
+    .verification-form .submit-btn, 
+    .verification-form .cancel-btn {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}
