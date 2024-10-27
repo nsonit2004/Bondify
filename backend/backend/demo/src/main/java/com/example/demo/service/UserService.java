@@ -351,7 +351,13 @@ public class UserService {
         up.bio,
         up.gender,
         up.interested_in,
-        up.verified
+        up.verified,
+        up.ava,    -- Thêm trường hình đại diện
+        up.img1,   -- Thêm trường hình ảnh thứ nhất
+        up.img2,   -- Thêm trường hình ảnh thứ hai
+        up.img3,   -- Thêm trường hình ảnh thứ ba
+        up.img4,   -- Thêm trường hình ảnh thứ tư
+        up.img5    -- Thêm trường hình ảnh thứ năm
     FROM 
         users u
     LEFT JOIN 
@@ -365,13 +371,11 @@ public class UserService {
     GROUP BY 
         u.id, u.email, u.phone_number, u.date_of_birth, u.role, u.user_status, 
         u.is_premium, p.name, d.name, up.first_name, up.bio, up.gender, 
-        up.interested_in, up.verified;
-""";
-
+        up.interested_in, up.verified, up.ava, up.img1, up.img2, up.img3, up.img4, up.img5;
+    """;
 
         return jdbcTemplate.queryForList(sql);
     }
-
 
 }
 
